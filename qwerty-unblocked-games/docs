@@ -1,1 +1,27 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QWERTY Unblocked Games</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    header {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #e63946; /* red */
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>QWERTY - Unblocked Games</header>
+  <p>Welcome to QWERTY Unblocked Games!</p>
+</body>
+</html>
