@@ -2,74 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QWERTY</title>
-  <link rel="icon" href="favicon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Qwerty Unblocked Games</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, red, green, blue);
-      color: white;
-      min-height: 100vh;
-    }
-    header {
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.3);
-      text-align: center;
+      background: #121212;
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
     }
     h1 {
-      margin: 0;
-      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #ff4500;
     }
-    nav {
-      margin-top: 10px;
-    }
-    .menu-button {
-      background-color: white;
-      color: black;
-      border: none;
-      padding: 10px 20px;
-      margin: 5px;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .menu-button:hover {
-      background-color: #ddd;
-    }
-    iframe {
+    .game-list {
+      list-style: none;
+      padding: 0;
+      max-width: 400px;
       width: 100%;
-      height: 80vh;
-      border: none;
-      display: none;
     }
-    .active {
+    .game-list li {
+      background: #1e1e1e;
+      margin: 1rem 0;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 1.2rem;
+      transition: background 0.3s;
+    }
+    .game-list li a {
+      color: #ff4500;
+      text-decoration: none;
       display: block;
+    }
+    .game-list li:hover {
+      background: #333;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>QWERTY</h1>
-    <nav>
-      <button class="menu-button" onclick="loadGame('polytrack')">Polytrack</button>
-      <button class="menu-button" onclick="loadGame('basketball')">Basketball Stars</button>
-      <button class="menu-button" onclick="loadGame('blockblast')">Block Blast</button>
-    </nav>
-  </header>
+  <h1>Qwerty Unblocked Games</h1>
+  <ul class="game-list">
+    <li><a href="games/slope/index.html" target="_blank" rel="noopener">Play Slope</a></li>
+    <li><a href="games/run3/index.html" target="_blank" rel="noopener">Play Run 3</a></li>
+    <li><a href="games/geometry-dash/index.html" target="_blank" rel="noopener">Play Geometry Dash</a></li>
+    <li><a href="games/polytrack/index.html" target="_blank" rel="noopener">Play Polytrack</a></li>
+    <li><a href="games/bitlife/index.html" target="_blank" rel="noopener">Play Bitlife</a></li>
+    <li><a href="games/block-blast/index.html" target="_blank" rel="noopener">Play Block Blast</a></li>
+  </ul>
 
-  <iframe id="polytrack" src="https://pyro-central.github.io/polytrack/"></iframe>
-  <iframe id="basketball" src="https://www.crazygames.com/game/basketball-stars-2019"></iframe>
-  <iframe id="blockblast" src="https://therrweb.netlify.app/games/block-blast/"></iframe>
-
-  <script>
-    function loadGame(gameId) {
-      const iframes = document.querySelectorAll("iframe");
-      iframes.forEach(iframe => iframe.classList.remove("active"));
-      const selected = document.getElementById(gameId);
-      if (selected) selected.classList.add("active");
-    }
-  </script>
+  <footer>© 2025 Qwerty Unblocked Games</footer>
 </body>
 </html>
