@@ -2,55 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QWERTY</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: linear-gradient(to right, red, green, blue);
       color: white;
-      text-align: center;
       min-height: 100vh;
-      padding: 40px 20px;
+    }
+    header {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.3);
+      text-align: center;
     }
     h1 {
-      font-size: 4rem;
-      margin-bottom: 10px;
+      margin: 0;
+      font-size: 3rem;
     }
-    p {
-      font-size: 1.2rem;
+    nav {
+      margin-top: 10px;
     }
-    .games {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-    }
-    .game-link {
+    .menu-button {
       background-color: white;
       color: black;
-      padding: 12px 24px;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 1rem;
       border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      width: fit-content;
-      transition: background 0.3s;
+      cursor: pointer;
     }
-    .game-link:hover {
+    .menu-button:hover {
       background-color: #ddd;
+    }
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+      display: none;
+    }
+    .active {
+      display: block;
     }
   </style>
 </head>
 <body>
-  <h1>QWERTY</h1>
-  <p>Play your favorite unblocked games here.</p>
+  <header>
+    <h1>QWERTY</h1>
+    <nav>
+      <button class="menu-button" onclick="loadGame('polytrack')">Polytrack</button>
+      <button class="menu-button" onclick="loadGame('basketball')">Basketball Stars</button>
+      <button class="menu-button" onclick="loadGame('blockblast')">Block Blast</button>
+    </nav>
+  </header>
 
-  <div class="games" id="games">
-    <a class="game-link" href="https://pyro-central.github.io/polytrack/" target="_blank">Play Polytrack</a>
-    <a class="game-link" href="https://www.crazygames.com/game/basketball-stars-2019" target="_blank">Play Basketball Stars</a>
-    <a class="game-link" href="https://therrweb.netlify.app/games/block-blast/" target="_blank">Play Block Blast</a>
-  </div>
+  <iframe id="polytrack" src="https://pyro-central.github.io/polytrack/"></iframe>
+  <iframe id="basketball" src="https://www.crazygames.com/game/basketball-stars-2019"></iframe>
+  <iframe id="blockblast" src="https://therrweb.netlify.app/games/block-blast/"></iframe>
+
+  <script>
+    function loadGame(gameId) {
+      const iframes = document.querySelectorAll("iframe");
+      iframes.forEach(iframe => iframe.classList.remove("active"));
+      const selected = document.getElementById(gameId);
+      if (selected) selected.classList.add("active");
+    }
+  </script>
 </body>
 </html>
