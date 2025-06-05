@@ -1,86 +1,57 @@
-<!DOCTYPE html>
+
+   <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>QWERTY - Unblocked Games</title>
+  <title>QWERTY</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #fff;
-    }
-
-    header {
-      background: linear-gradient(90deg, red, blue, green, yellow);
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    main {
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .game-card {
-      background: #f0f0f0;
-      border-radius: 10px;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .game-card h3 {
-      margin: 0.5rem 0;
-    }
-
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      border-radius: 10px;
-    }
-
-    footer {
-      background: #222;
+      background: linear-gradient(to right, red, green, blue);
       color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    .games {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+    .game-link {
+      background-color: white;
+      color: black;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      width: fit-content;
+      transition: background 0.3s;
+    }
+    .game-link:hover {
+      background-color: #ddd;
     }
   </style>
 </head>
 <body>
+  <h1>QWERTY</h1>
+  <p>Play your favorite unblocked games here.</p>
 
-  <header>
-    QWERTY - Unblocked Games
-  </header>
-
-  <main>
-    <div class="game-card" style="border-top: 5px solid red;">
-      <h3>PolyTrack</h3>
-      <iframe src="https://ubg76.github.io/drift-hunters/" allowfullscreen></iframe>
-    </div>
-
-    <div class="game-card" style="border-top: 5px solid blue;">
-      <h3>Basketball Stars</h3>
-      <iframe src="https://ubg98.github.io/basketball-stars/" allowfullscreen></iframe>
-    </div>
-
-    <div class="game-card" style="border-top: 5px solid green;">
-      <h3>Block Blast</h3>
-      <iframe src="https://ubg77.github.io/block-blast/" allowfullscreen></iframe>
-    </div>
-  </main>
-
-  <footer>
-    &copy; 2025 QWERTY. All rights reserved.
-  </footer>
-
+  <div class="games" id="games">
+    <a class="game-link" href="https://pyro-central.github.io" target="_blank">Play Polytrack</a>
+    <a class="game-link" href="https://www.crazygames.com/game/basketball-stars-2019" target="_blank">Play Basketball Stars</a>
+    <a class="game-link" href="https://poki.com/en/g/block-blast" target="_blank">Play Block Blast</a>
+  </div>
 </body>
 </html>
