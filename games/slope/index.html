@@ -1,64 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Qwerty Unblocked Games</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #121212;
-      color: #eee;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
-    }
-    h1 {
-      margin-bottom: 1rem;
-      color: #ff4500;
-    }
-    .game-list {
-      list-style: none;
-      padding: 0;
-      max-width: 400px;
-      width: 100%;
-    }
-    .game-list li {
-      background: #1e1e1e;
-      margin: 1rem 0;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      text-align: center;
-      font-size: 1.2rem;
-      transition: background 0.3s;
-    }
-    .game-list li a {
-      color: #ff4500;
-      text-decoration: none;
-      display: block;
-    }
-    .game-list li:hover {
-      background: #333;
-    }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
-  <h1>Qwerty Unblocked Games</h1>
-  <ul class="game-list">
-    <li><a href="games/slope/index.html" target="_blank" rel="noopener">Play Slope</a></li>
-    <li><a href="games/run3/index.html" target="_blank" rel="noopener">Play Run 3</a></li>
-    <li><a href="games/geometry-dash/index.html" target="_blank" rel="noopener">Play Geometry Dash</a></li>
-    <li><a href="games/polytrack/index.html" target="_blank" rel="noopener">Play Polytrack</a></li>
-    <li><a href="games/bitlife/index.html" target="_blank" rel="noopener">Play Bitlife</a></li>
-    <li><a href="games/block-blast/index.html" target="_blank" rel="noopener">Play Block Blast</a></li>
-  </ul>
-
-  <footer>© 2025 Qwerty Unblocked Games</footer>
-</body>
+<html lang="en-us">
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Unity WebGL Player | Slope</title>
+<link rel="stylesheet" href="style/style.css">
+<script src="UnityProgress.js"></script>
+<script src="UnityLoader.js"></script>
+<script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "slope_new.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
+    </script>
+<div class="webgl-content">
+<div id="gameContainer" style="width: 100%; height: 100%; margin: auto"></div>
+</div>
+<script defer src="/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"75ce1899c9afdb8e","token":"c843b8c381814d58b40d4597a1bf7962","version":"2022.10.3","si":100}' crossorigin="anonymous"></script>
 </html>
