@@ -6,14 +6,25 @@
   <title>QWERTY - Game List</title>
   <style>
     body {
-      background-color: #f9f9f9;
+      margin: 0;
+      padding: 2rem;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 2rem;
+      color: #fff;
+      background: linear-gradient(135deg, red, yellow, green, blue);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     h1 {
-      color: #333;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     ul {
@@ -35,6 +46,7 @@
       font-size: 1.2rem;
       border-radius: 10px;
       transition: transform 0.2s, background-color 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     a:hover {
