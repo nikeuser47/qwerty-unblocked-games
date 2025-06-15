@@ -2,100 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QWERTY - Game List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QWERTY Unblocked Games</title>
   <style>
     body {
-      margin: 0;
-      padding: 2rem;
+      background: linear-gradient(to right, red, blue, green, yellow);
       font-family: Arial, sans-serif;
       text-align: center;
-      color: #fff;
-      background: linear-gradient(135deg, red, yellow, green, blue);
-      background-size: 400% 400%;
-      animation: gradientMove 15s ease infinite;
+      color: white;
     }
-
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
     h1 {
-      color: #fff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-top: 30px;
     }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      max-width: 600px;
-      margin: 2rem auto;
-    }
-
-    li {
-      margin: 1rem 0;
-    }
-
-    a {
+    .game-link {
       display: block;
-      padding: 1rem;
+      margin: 20px;
+      font-size: 20px;
+      background-color: rgba(0,0,0,0.3);
+      padding: 10px;
+      border-radius: 10px;
       text-decoration: none;
       color: white;
-      font-size: 1.2rem;
-      border-radius: 10px;
-      transition: transform 0.2s, background-color 0.3s;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-
-    a:hover {
-      transform: scale(1.05);
+    .game-link:hover {
+      background-color: rgba(0,0,0,0.6);
     }
-
-    .red {
-      background-color: #e53935;
-    }
-
-    .red:hover {
-      background-color: #c62828;
-    }
-
-    .blue {
-      background-color: #1e88e5;
-    }
-
-    .blue:hover {
-      background-color: #1565c0;
-    }
-
-    .green {
-      background-color: #43a047;
-    }
-
-    .green:hover {
-      background-color: #2e7d32;
-    }
-
-    .yellow {
-      background-color: #fbc02d;
-      color: #333;
-    }
-
-    .yellow:hover {
-      background-color: #f9a825;
+    iframe {
+      border: none;
+      width: 90%;
+      height: 80vh;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
+  <h1>QWERTY Unblocked Games</h1>
 
-  <h1>QWERTY - Unblocked Games</h1>
-  <ul>
-    <li><a class="red" href="games/slope/index.html" target="_blank" rel="noopener">Play Slope</a></li>
-    <li><a class="blue" href="games/polytrack/index.html" target="_blank" rel="noopener">Play Polytrack</a></li>
-    <li><a class="green" href="games/bitlife/index.html" target="_blank" rel="noopener">Play Bitlife</a></li>
-    <li><a class="yellow" href="games/block-blast/index.html" target="_blank" rel="noopener">Play Block Blast</a></li>
-  </ul>
+  <!-- Link to open game in iframe -->
+  <a class="game-link" href="games/polytrack/index.html" target="game-frame">Play Polytrack</a>
+  <a class="game-link" href="games/bitlife/index.html" target="game-frame">Play Bitlife</a>
+  <a class="game-link" href="games/drive-mad/index.html" target="game-frame">Play Drive Mad</a>
 
+  <!-- Game Iframe -->
+  <iframe name="game-frame"></iframe>
 </body>
 </html>
